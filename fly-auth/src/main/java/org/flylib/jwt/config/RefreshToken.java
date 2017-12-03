@@ -19,6 +19,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.alibaba.fastjson.JSONObject;
 
+/**
+ * 
+ * @author Frank Liu(Liu Shaoming)(liushaomingdev@163.com)
+ *
+ */
 @WebServlet("/refreshToken" )
 public class RefreshToken extends HttpServlet{
 
@@ -33,6 +38,12 @@ public class RefreshToken extends HttpServlet{
 		doPost(request, response);
     }
 
+	/**
+	 * 利用HTML5的EventSource来实现服务器推送数据到浏览器客户端
+	 * response.setContentType( "text/event-stream;charset=UTF-8" );
+     *       response.setHeader( "Cache-Control", "no-cache" );
+     *       response.setHeader( "Connection", "keep-alive" );
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
         	response.setContentType( "text/event-stream;charset=UTF-8" );
@@ -45,6 +56,8 @@ public class RefreshToken extends HttpServlet{
      		User user = JSONObject.parseObject(json, User.class);
      		String subject = JwtUtil.generalSubject(user);
      		String refreshToken = jwt.createJWT(Constant.JWT_ID, subject, Constant.JWT_TTL);
+     		// retry:表示每间隔多长数据，服务器推送一次event到浏览器，如果retry设置了，就只能推送重复的event.
+     		// data：表示推送的数据
             out.print("retry: "+Constant.JWT_REFRESH_INTERVAL+ "\n" );
      		out.print("data: "+refreshToken+"\n\n" );
             out.flush();

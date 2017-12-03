@@ -8,7 +8,7 @@ define(function(require, exports, module){
 
     //初始化
     login.init = function(){
-        $("#account,#pwd").val("");
+        $("#account,#password").val("");
         login.event();
         login.loadTopWindow();
     };
@@ -22,7 +22,7 @@ define(function(require, exports, module){
 
     //事件注册
     login.event = function(){
-        $("#pwd").keypress(function(e){
+        $("#password").keypress(function(e){
             if(e.keyCode==13){
                 login.doLogin();
             }
@@ -36,9 +36,9 @@ define(function(require, exports, module){
     login.doLogin = function(){
     	loginLy = tool.load();
     	var account = $.trim($("#account").val()),
-        	pwd = $.trim($("#pwd").val()),
-        	params = {account:account, pwd:pwd};
-        if(tool.isEmpty(account) || tool.isEmpty(pwd)){
+    	password = $.trim($("#password").val()),
+        	params = {account:account, password:password};
+        if(tool.isEmpty(account) || tool.isEmpty(password)){
             tool.msg("账号密码不允许为空",2);
             tool.closeLayer(loginLy);
             return;

@@ -18,6 +18,11 @@ import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
+/**
+ * 
+ * @author Frank Liu(liushaomingdev@163.com)
+ *
+ */
 @Component
 public class JwtUtil {
 	
