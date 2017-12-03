@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+
+/* nav */
+.nav .navLeft{float: left;margin: 3px 0 0 12px;width: 300px;}
+.nav .navLeft img {vertical-align: middle;}
+.nav .navRight{float: right;margin:3px 12px 0 0;color: #3794d8;}
+.nav .navFirstTip{color:#3794d8;}

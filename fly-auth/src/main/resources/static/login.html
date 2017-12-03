@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login.html</title>
+    <link rel="stylesheet" href="js/plugin/layer/skin/layer.css"/>
+    <link rel="stylesheet" href="css/system.css" />
+</head>
+<body style="background: #f3f0e9;">
+<div class="loginDiv">
+    <div class="topBackground"></div>
+    <div class="topNav">
+        <p></p>
+    </div>
+    <div class="middleForm">
+        <p class="title">用户登录</p>
+        <p class="int"><input id="account" type="text" placeholder="请输入账号"></p>
+        <p class="int"><input id="pwd" type="password" placeholder="请输入密码"></p>
+        <p id="loginBtn"><span style="cursor: pointer">登录</span></p>
+    </div>
+    <div class="bottomDiv">
+    	©2016,all rights reserved
+	</div>
+</div>
+
+<script type="text/javascript" src="js/plugin/seajs/sea.js"></script>
+<script type="text/javascript">
+    seajs.config({
+        base: "./js/",
+        alias: {
+            "jquery"  :  "plugin/jquery/jquery-1.10.2.min",
+            "md5"     :  "plugin/jquery/jquery.md5"
+        },
+        map: [
+            [ /^(.*\/js\/.*\.(?:css|js))(?:.*)$/i, '$1?201605241248']
+        ]
+    });
+    seajs.use("/js/system/login.js",function(login){
+        login.init();
+    });
+</script>
+</body>
+
+</html>

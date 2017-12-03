@@ -1,0 +1,84 @@
+@CHARSET "UTF-8";
+
+*{margin: 0;padding: 0;list-style: none;font-family: "微软雅黑";font-size:14px;}
+
+/* login.html */
+.loginDiv{
+	position:relative;
+	clear: both;
+}
+.loginDiv .topBackground{
+	height: 320px;
+}
+.loginDiv .login_logo{
+	vertical-align:middle
+}
+.loginDiv .topNav{
+	text-align: center;
+    margin-top: -230px;
+}
+.loginDiv .topNav p{
+	font-size: 25px;color: #FFFFFF;
+}
+.loginDiv .topNav p span{
+	font-size:35px; 
+}
+.loginDiv .middleForm{
+	width:412px; 
+	height: 360px;
+	margin: 0 auto;
+	background: #FFFFFF;
+	text-align: center;
+	margin-top: 15px;
+}
+.loginDiv .middleForm p{
+	text-align: center;
+	line-height: 48px;
+	padding-top: 16px
+}
+.loginDiv .middleForm .title{
+	font-size: 25px;
+	color: #454343;
+	padding-top: 20px;
+}
+.loginDiv .middleForm .int{
+	margin-top: 5px;
+	color:black;
+}
+.loginDiv .middleForm .int input{
+	border-bottom:1px solid #cecece; 
+	border-top:none;border-left:none; border-right:none;
+	font-size: 18px;
+	height:28px;
+}
+.loginDiv .middleForm #account{
+	width:346px; 
+}
+.loginDiv .middleForm #pwd{
+	width:346px; 
+}
+.loginDiv .middleForm #randCode{
+	width:256px;
+}
+.loginDiv .middleForm #randImg{
+	width:21%;
+	height:31px;
+	vertical-align: middle;
+}
+.loginDiv .middleForm #loginBtn span{
+	padding: 10px 160px;
+	background: #3794d8;
+	color:#FFFFFF;
+	border-radius: 4px; 
+	font-size: 18px;
+}
+.loginDiv .bottomDiv{ 
+	position:fixed; 
+	bottom:0; left:0; right:0; 
+	padding:10px 0; 
+	border-top:1px solid #cecece; 
+	text-align:center; 
+}
+.loginDiv .bottomDiv a{
+	color: blue;
+}

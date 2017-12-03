@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+    <link rel="stylesheet" href="/css/list.css" />
+    <link rel="stylesheet" href="/css/system.css" />
+</head>
+<body>
+	<div class="rightDiv">
+		<div class="nav">
+        <p class="navLeft">
+            <span class="navFirstTip">首页</span><span>/欢迎页</span></p>
+        <p class="navFirstTip">
+            <span id="greet" class="navRight"></span></p>
+	    </div>
+	    <div class="welcome">
+	        <span class="hi">Hi</span>
+	        <h1 class="h5">欢迎使用</h1>
+	    </div>
+	</div>
+    <script type="text/javascript" src="/js/plugin/seajs/sea.js"></script>
+    <script type="text/javascript">
+        seajs.config({
+            base: "/js/",
+            alias: {
+                "jquery"     :  "plugin/jquery/jquery-1.10.2.min"
+            },
+            map: [
+                [ /^(.*\/js\/.*\.(?:css|js))(?:.*)$/i, '$1?201608081442']
+            ]
+        });
+        seajs.use("/js/system/system.js",function(system){
+            system.mainInit();
+        });
+    </script>
+</body>
+</html>
