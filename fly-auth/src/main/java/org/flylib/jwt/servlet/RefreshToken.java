@@ -1,4 +1,4 @@
-package org.flylib.jwt.config;
+package org.flylib.jwt.servlet;
 
 import io.jsonwebtoken.Claims;
 
@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.flylib.jwt.bean.User;
+import org.flylib.jwt.config.Constant;
 import org.flylib.jwt.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 

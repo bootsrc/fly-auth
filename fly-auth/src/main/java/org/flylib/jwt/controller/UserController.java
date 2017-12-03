@@ -1,4 +1,4 @@
-package org.flylib.jwt.servlet;
+package org.flylib.jwt.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
