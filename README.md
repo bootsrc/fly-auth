@@ -10,7 +10,7 @@ fly-auth是使用了JWT标准进行权限认证的框架
 3. EventSource(HTML5特性)
 4. 使用了jjwt.jar
 
-## flylib-boot-starter详细说明(JWT)
+## flylib-boot-starter项目详细说明(JWT)
 JWT(json web token)机制，可以让微服务变成无状态的服务。fly-auth就是为完成这个功能而诞生的
 
 JWT的应用场景是怎么产生的呢？
